@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "perfect-aura-321606",
+  "private_key_id": "a04f4142247f7286f94970e569bf751002175407",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCgI/t1gD4s9vBr\nsGzlLltgy3fKiv6kYjkLraJRWV3KRxMQRcfE9VR+UekOpeyX3gIAQs0YIht5bVoV\nczkc1Z/QTU3kEIxm0OECiy+LkG8qJNE2CSnubXhrBX//wOMoQNZ/hQpKHeaH/8WV\n65hrUZl8Hf4hoJF5/XK3vZ43eoQ7NRJtB6FLEK6gqCb9Lbb3c2VURClc3PGIOms3\nTKvTow0gZ8vP5TYViJo/fxxuuOdHAV9c7yKvrH9oRkmmkJ3e1b3nn/kZqpLbx9TA\nJ1sqhk3E+5SGDtWxt4YgTKHxBRP7xqJxLc8QbY7ThQ2/4DfOql0bB2gdCBzXebJi\n3kgDxTh1AgMBAAECggEAAgpTUtzubd47k/Osf4MGsQYGobMBqZCCz45HyieMVV5w\ndL2e3PiPOgjLIl+k0w6GEgDH4i3VEcf95NYR/TcPkTTa8DPxxgGVTFX/phSSBgRw\nEfMt8Ja+eQaZ6eVIP6QL15YXWnhlDoiIuO9Ggt+ISBeNvFnyYI6FHqgw0t4hvytZ\nw0Gqs5r2ugZhZkbemlmW6HcptGeoKSzQmWUftQsK1IrnFoS+qL6svWTExjU/yyk6\n4htlhRVuSZHREEZ2Q/3P0yrsw6Ttk+uHqSGJAJZIHG+xqpnWTnXr28hzDwKzoCDY\nlLxEAws5Mxcbonm9GP52RcvK0e7t7zK3zNYEjY73oQKBgQDaH81uR9xwt3IDCyat\npWj+d6onnhE0nlXRIJlGl0rdAPmR+PBlYDsVuKYyw8eA0if2QMBHIwLYlTe5WlIg\nQxHGwpqhtp1w+UnH5WPfbDJDAHWq2T9Khsz3hLFmAZi62x14CT4MwzpfwXN87DIu\ngudNYzbDpTH0eA5SuG5E5v28rQKBgQC78qcM6Y2p1UAgrZN9cxfQARBMEmIZP3Ar\nCjcySoY2/rUpJ6PSZctgVBrHB9TjHIuGIewi1kI31wK4ID22MCE5X6fabn1Gakb+\nPgmmoM8TcEV/gW1213RsXFrmQal4c5ns6Q5+we/3e3CxJWyOvkD8oWoNtiaGJjG8\nZEj01S9b6QKBgQDLq2pckQkKzp/Mq7rf5VWWVhIxj+ys3zNuZCv6uAYVOnXOkU2W\nuzYwYAv/1sMQTCs4Stm/Erfzl9FCZ03MBhQxLUDJwwRbmsoDtvN8iUCdQ26bquLo\nKdp1PBeREeiUgUiQ7sBblmeJRc8aVEm/GEf2ALAAGt38UaW+I6wC9lTyuQKBgQC2\nlQn3n0QBwqqjlDv92Ls/VGkynYEzKc+b4Day4nb0Igh3zIx3LnCeSdYhl9gWMXrR\neU7eoOp/OJ7ppFiPDr6X7/cuWbvVlhUVk8roVrwUFDNPpLpkgvYU9rtPiGZMH3Ff\nFyD/vwORlhdp4ANPwD99rIlMfLF8DMqwS3QcdKWnUQKBgQCFsQFWENtDSbPq/JlC\nvaNM+cJR77m48cLX7Vrhc0G8wQ0faMhQ0nUxvnXpM1K+587J7oKEL/ZxsKseKwwV\nZ1KY5KBIWjfo1yRymdubkc/1yBPUErpmdmclx+A2+CwUNm2/9W4gdXjOchOczwvi\nCxsc1V7xEkNtknMaQvqgQM6Zig==\n-----END PRIVATE KEY-----\n",
+  "client_email": "gcp-terraform-service@perfect-aura-321606.iam.gserviceaccount.com",
+  "client_id": "101853141378491899812",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gcp-terraform-service%40perfect-aura-321606.iam.gserviceaccount.com"
+}

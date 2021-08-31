@@ -3,6 +3,7 @@ This is a test server definition for GCE+Terraform for GH-9564
 */
 
 provider "google" {
+  credentials = file("perfect-aura-321606-a04f4142247f.json")
   project = var.project
   region  = var.region
 }
@@ -71,27 +72,48 @@ resource "google_compute_instance" "dev" {
     ssh-keys = "${var.user}:${file(var.publickeypath)}"
   }
 
-  # to connect to the instance after the creation and execute few commands for provisioning
-  # here you can execute a custom Shell script or Ansible playbook
-  provisioner "remote-exec" {
-    connection {
-      host        = google_compute_address.static.address
-      type        = "ssh"
-      # username of the instance would vary for each account refer the OS Login in GCP documentation
-      user        = var.user 
-      timeout     = "500s"
-      # private_key being used to connect to the VM. ( the public key was copied earlier using metadata )
-      private_key = file(var.privatekeypath)
-    }
+  provisioner "file" {
+   
+   # source file name on the local machine where you execute terraform plan and apply
+   source      = "startupscript.sh"
 
-    # Commands to be executed as the instance gets ready.
-    # installing nginx
-    inline = [
-      "sudo yum -y install epel-release",
-      "sudo yum -y install nginx",
-      "sudo nginx -v",
-    ]
-  }
+   # destination is the file location on the newly created instance
+   destination = "/tmp/startupscript.sh"
+
+   connection {
+     host        = google_compute_address.static.address
+     type        = "ssh"
+     # username of the instance would vary for each account refer the OS Login in GCP documentation
+     user        = var.user 
+     timeout     = "500s"
+     # private_key being used to connect to the VM. ( the public key was copied earlier using metadata )
+     private_key = file(var.privatekeypath)
+   }
+ }
+
+
+
+ # to connect to the instance after the creation and execute few commands for provisioning
+ # here you can execute a custom Shell script or Ansible playbook
+ provisioner "remote-exec" {
+   connection {
+     host        = google_compute_address.static.address
+     type        = "ssh"
+     # username of the instance would vary for each account refer the OS Login in GCP documentation
+     user        = var.user 
+     timeout     = "500s"
+     # private_key being used to connect to the VM. ( the public key was copied earlier using metadata )
+     private_key = file(var.privatekeypath)
+   }
+
+   # Commands to be executed as the instance gets ready.
+   # set execution permission and start the script
+   inline = [
+     "chmod a+x /tmp/startupscript.sh",
+     "sed -i -e 's/\r$//' /tmp/startupscript.sh",
+     "sudo /tmp/startupscript.sh"
+   ]
+ }
 
   # Ensure firewall rule is provisioned before server, so that SSH doesn't fail.
   depends_on = [ google_compute_firewall.firewall, google_compute_firewall.webserverrule ]

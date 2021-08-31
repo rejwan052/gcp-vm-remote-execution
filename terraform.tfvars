@@ -1,4 +1,4 @@
-project = "devopsjunction"
-region = "us-central1"
-user = "middlewareinvetory_gmail_com" # this should match the username set by the OS Login
-email = "dj-serviceaccount@devopsjunction.iam.gserviceaccount.com"
+project = "perfect-aura-321606"
+region = "asia-south1"
+user = "rajwan052" # this should match the username set by the OS Login
+email = "gcp-terraform-service@perfect-aura-321606.iam.gserviceaccount.com"
